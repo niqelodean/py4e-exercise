@@ -8,7 +8,7 @@ def calculate_bmi(bmi):
     else:
         return ("Underweight")
 name = input("What is your name: ")
-weight = int(input("how much do u weight: "))
+weight = float(input("how much do u weight: "))
 height = float(input("How tall are you: "))
 
 bmi_score = weight / (height*height)
