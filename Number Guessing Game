@@ -1,0 +1,25 @@
+def secret_number (num):
+    if num == 7 :
+        return ("Congrats You Guess the Number right")
+    elif 7 > num:
+        return ("Higher")
+    elif  num > 7:
+        return ("Lower")
+
+user_number = int(input("Guess a number: "))
+result = secret_number(user_number)
+
+print(f"Number you Guess {user_number}")
+print(result)
+
+user_number = int(input("Guess a number: "))
+result = secret_number(user_number)
+
+print(f"Number you Guess {user_number}")
+print(result)
+
+user_number = int(input("Guess a number: "))
+result = secret_number(user_number)
+
+print(f"Number you Guess {user_number}")
+print(result)
