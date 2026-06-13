@@ -1,25 +1,21 @@
-def secret_number (num):
-    if num == 7 :
-        return ("Congrats You Guess the Number right")
-    elif 7 > num:
-        return ("Higher")
-    elif  num > 7:
-        return ("Lower")
+secret_num = 7
+attempts_left = 3
+guessed_correctly = False
 
-user_number = int(input("Guess a number: "))
-result = secret_number(user_number)
+while attempts_left > 0:
+    usernumber = int(input("Guess a number: "))
+    
+    if usernumber == secret_num:
+        print("Congrats!")
+        guessed_correctly = True
+        break
+    elif usernumber < secret_num:
+        print("Go higher")
+    else:
+        print("Go lower")
+        
+    attempts_left -= 1
+    print(f"Attempts remaining: {attempts_left}\n")
 
-print(f"Number you Guess {user_number}")
-print(result)
-
-user_number = int(input("Guess a number: "))
-result = secret_number(user_number)
-
-print(f"Number you Guess {user_number}")
-print(result)
-
-user_number = int(input("Guess a number: "))
-result = secret_number(user_number)
-
-print(f"Number you Guess {user_number}")
-print(result)
+if not guessed_correctly: #if guessed_correctly still False this code will run
+    print(f"You lose! The secret number was {secret_num}")
