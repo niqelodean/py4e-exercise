@@ -1,22 +1,40 @@
-def calculate_grade(average):
-    if average >= 90:
+def student_grade (grade):
+    if grade >= 90:
         return "A"
-    elif average >= 80:
+    elif grade >= 80:
         return "B"
-    elif average >= 70:
+    elif grade >= 70:
         return "C"
-    elif average >= 60:
+    elif grade >= 60:
         return "D"
     else:
         return "F"
-math = int(input("Enter the math score: "))
-science = int(input("Enter the science score: "))
-history = int(input("Enter the history score: "))
-compsci = int(input("Enter the computer science score: "))
-english = int(input("Enter the english score: "))
-average = (math + science + history + compsci + english) / 5
+    
+num_of_student = int(input("How many student they are: \n"))
 
-grade = calculate_grade(average)
-print ("---Results---")
-print("Your average score is:", average)
-print("Your grade is:", grade)
+print ("=== Student Report === ")
+
+highest_avg = 0
+highest_name = ""
+lowest_avg = 100
+lowest_name = ""
+
+for i in range(num_of_student):
+    name = input("Student Name: \n")
+    math = int(input("Enter the math score: \n"))
+    science = int(input("Enter the science score: \n" ))
+    history = int(input("Enter the history score: \n"))
+
+    average = (math + science + history) /3
+    grade = student_grade(average)
+    print (f"{name}    | Avg: {average:.2f}      |Grade: {grade}")
+    
+    if average > highest_avg:
+        highest_avg = average
+        highest_name = name
+    if average < lowest_avg:
+        lowest_avg = average
+        lowest_name = name
+
+print (f"Highest Average: {highest_name} with {highest_avg:.2f}")
+print (f"Lowest Average: {lowest_name} with {lowest_avg:.2f}")
