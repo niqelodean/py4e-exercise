@@ -1,4 +1,4 @@
-# py4e-exercise-1-10
+# py4e-exercise
 
 Exercise for Variable, Conditions, Function, Loops, File Handling, Lists, Tuples and Dictionary:
 1. Grade Calculator
