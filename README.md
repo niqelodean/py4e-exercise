@@ -1,7 +1,8 @@
-# py4e-exercise-1-7
+# py4e-exercise-1-10
 
-Exercise for Variable, Conditions, Function, Loops and File Handling:
+Exercise for Variable, Conditions, Function, Loops, File Handling, Lists, Tuples and Dictionary:
 1. Grade Calculator
 2. BMI Calculator
 3. Number Guessing Game
 4. Text File Analyzer
+5. Student Database
